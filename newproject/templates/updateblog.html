@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block body %}
+
+ <hr class="mt-0 mb-4">
+   <div class="row">
+       <div class="col-xl-2"></div>
+        <div class="col-xl-6">
+             <div class="card mb-4">
+                <div class="card-header">Create Blog</div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row gx-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="topc">Topic</label>
+                                <input type="text" id="topc" name="topc" value="{{i.topic}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="title">Blog Title</label>
+                                <input type="text" id="title" name="title" value="{{i.caption}}">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="small mb-1" for="img">Upload Image</label>
+                            <input class="form-control" id="img" type="file" name="image">
+                        </div>
+
+                        <div class="row gx-3 mb-3">
+                            <div class="col-md-6">
+                                <label for="content">Blog Content</label>
+                                <textarea class="form-control" rows="10" id="content" name="content" style="width:625px;"></textarea>
+                            </div><br>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Create Blog</a></button>
+                    </form>
+                </div>
+             </div>
+        </div>
+   </div>
+
+{% endblock %}

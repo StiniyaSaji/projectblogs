@@ -1,0 +1,30 @@
+/*.login{
+        width: 600px;
+        margin: 100 100 40 20px;
+        padding: 20px;
+        background: #20c997;
+        color:white;
+}
+
+#uname{
+    width: 550px;
+    height: 30px;
+    color:white;
+}
+
+#pswd{
+    width: 550px;
+    height: 30px;
+    color:white;
+}
+
+#log{
+    width: 100px;
+    height: 50px;
+    color:black;
+
+}*/
+
+body{
+    background:#000;
+}

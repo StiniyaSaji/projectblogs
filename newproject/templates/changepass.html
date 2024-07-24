@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block body %}
+
+
+<div class="row">
+    <div class="col-xl-3"></div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">Change password</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row gx-3 mb-3">
+                        <div class="mb-3">
+                            <label class="small mb-1" for="inputEmailAddress">Old password</label>
+                            <input class="form-control" id="inputEmailAddress" type="text" name="oldpass" placeholder="Enter your old password">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputFirstName">New password</label>
+                            <input class="form-control" id="inputFirstName" type="text" name="newpass" placeholder="Enter new password" >
+                        </div>
+                        <div class="col-md-6">
+                            <label class="small mb-1" for="inputLastName">Confirm password</label>
+                            <input class="form-control" id="inputLastName" type="text" name="cpass" placeholder="Confirm password" >
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="mt-5"></div>
+<div style="text-align:center;">
+
+    <form method="post">
+        {% csrf_token %}
+
+        <h2>Forgot Password?</h2>
+        <h5 >You can reset your password here.</h5>
+
+        <input type="text" name="phone" id="phone" placeholder="Enter phone number"><br><br>
+        <button type="submit" class="save btn btn-default">Reset Password</button><br>
+
+    </form><br>
+
+    <div>
+        <a href="/" style="text-decoration:none;color:black;" > ---Or Login With---</a>
+    </div>
+</div>
+
+</body>
+</html>

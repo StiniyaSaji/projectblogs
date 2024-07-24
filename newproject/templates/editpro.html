@@ -1,0 +1,52 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<div class="row">
+    <div class="col-xl-3"></div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">Account Details</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="fname">First Name</label>
+                            <input class="form-control" type="text" id="fname" name="fname" placeholder="Enter your first name" value="{{data.first_name}}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="lname">Last Name</label>
+                            <input class="form-control" type="text" id="lname" name="lname" placeholder="Enter your last name" value="{{data.last_name}}"><br><br>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Email Address</label>
+                        <input class="form-control" type="text" id="email" name="email" placeholder="Enter your email address" value="{{data.email}}"><br><br>
+                    </div>
+                    <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="phone">Phone</label>
+                            <input class="form-control" type="text" id="phone" name="phone" placeholder="Enter your Phone">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="dob">DOB</label>
+                            <input class="form-control" type="date" id="dob" name="dob" placeholder="Enter your Date of birth">
+                        </div>
+                    </div>
+                    <div class="row gx-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="addr">Address</label>
+                            <input class="form-control" type="text" id="addr" name="addr">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="city">City</label>
+                            <input class="form-control" type="text" id="city" name="city"><br><br>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save changes</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<div class="row">
+        <div class="col-xl-5"></div>
+        <div class="col-xl-3">
+          <div class="card mb-6 mb-xl-0">
+              <div class="card-header">Profile Picture</div>
+              <form enctype="multipart/form-data" method="post">
+                  {% csrf_token %}
+                  <div class="card-body text-center">
+                    <img class="img-account-profile rounded-circle mb-1" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                    <input type="file"  id="shop_image" name="images"><br><br>
+                    <button class="btn btn-primary" type="submit">Upload Image</button>
+                  </div>
+              </form>
+          </div>
+        </div>
+</div>
+
+{% endblock %}
